@@ -72,7 +72,7 @@ def factor(n) -> list:
 if __name__ == '__main__':
     print("This program graphs the number of factors of each integer between 1 and an inputted upper bound.\n"
           "Simultaneously, it marks the point every time a new record number of factors is found.\n"
-          "Enter -1 to quit.")
+          "Entering powers of 10 will look the nicest. Enter -1 to quit.")
 
     while True:
         upper_bound = int(input("Enter upper bound: "))
