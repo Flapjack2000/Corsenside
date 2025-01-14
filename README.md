@@ -1,9 +1,9 @@
 # Corsenside
-**_Where am I?_**
+### **_Where am I?_**
 
 This repository serves as the home for all of my **math related programming projects** as I study **computer science** and **mathematics**.
 
-**_Why call it Corsenside?_**
+### **_Why call it Corsenside?_**
 
 It's a reference to **William Shanks**, an English mathematician born in 1812 in **Corsenside**, Northumberland.
 
