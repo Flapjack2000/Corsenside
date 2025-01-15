@@ -6,6 +6,8 @@ This repository serves as the home for all of my **math related programming proj
 
 These will often include `Python` representations of **algorithms**, my **solutions to [Project Euler](https://projecteuler.net/about) problems**, and anything else I find interesting.
 
+---
+
 ### _Why call it Corsenside?_
 
 It's a reference to **[William Shanks](https://en.wikipedia.org/wiki/William_Shanks)**, an English mathematician born in 1812 in **Corsenside**, Northumberland.
