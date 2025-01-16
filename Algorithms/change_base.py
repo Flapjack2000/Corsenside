@@ -34,7 +34,7 @@ def change_base(num: int, base: int) -> str:
     while num != 0:
 
         # Find remainder
-        remainder: str = str(num % base)
+        remainder: int = (num % base)
 
         # Check if the remainder needs to be converted to a one digit symbol
         if remainder in digit_table.keys():
@@ -55,11 +55,13 @@ print(f"This program lets you convert a decimal integer to any base between 2 an
 
 # Run the program
 while True:
-    n: int = int(input("Enter a positive integer: "))
+    n: int = int(float(input("Enter a positive integer: ")))
     if n == -1:
+        print("Thank you. Have a nice day.")
         break
-    b: int = int(input("Enter a base: "))
+    b: int = int(float(input("Enter a base: ")))
     if b == -1:
+        print("Thank you. Have a nice day.")
         break
 
     print(change_base(n, b))
