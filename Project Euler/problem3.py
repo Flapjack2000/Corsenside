@@ -7,16 +7,13 @@ The prime factors of 13195 are 5, 7, 13, and 29.
 """
 import math
 
-def list_factors(n) -> list:
-    """ Find all factors of a number n, including 1 and n. """
+def list_factors(n: int) -> list:
+    # Check for factors under sqrt(n)
+    factors = [i for i in range(1, int(math.sqrt(n)) + 1) if n / i % 1 == 0]
 
-    # check for factors under sqrt(n)
-    # (not n/i % 1) means (n/i % 1 == 0)
-    factors: list = [i for i in range(1, int(n ** 0.5) + 1) if not n / i % 1]
-
-    # if (i) is a factor, then (n/i) must also be a factor
-    # don't add duplicates from perfect squares
-    factors.extend([int(n / f) for f in factors if (not n / f % 1) and (n / f not in factors)])
+    # If (i) is a factor, then (n/i) must also be a factor
+    # Don't add duplicates from perfect squares
+    factors.extend([int(n / f) for f in factors if (n / f % 1 == 0) and (n / f not in factors)])
 
     return sorted(factors)
 
