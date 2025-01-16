@@ -52,22 +52,15 @@ def graph_factors_in_range(x_min, x_max):
     plt.xlabel("Integers")
     plt.show()
 
-def factor(n) -> list:
-        # NEW WAY check for factors under sqrt(n)
-        factors = [i for i in range(1, int(math.sqrt(n)) + 1) if n/i % 1 == 0]
+def factor(n: int) -> list:
+    # Check for factors under sqrt(n)
+    factors = [i for i in range(1, int(math.sqrt(n)) + 1) if n / i % 1 == 0]
 
-        # if (i) is a factor, then (n/i) must also be a factor
-        # don't add duplicates from perfect squares
-        factors.extend([int(n/f) for f in factors if (n/f % 1 == 0) and (n/f not in factors)])
+    # If (i) is a factor, then (n/i) must also be a factor
+    # Don't add duplicates from perfect squares
+    factors.extend([int(n / f) for f in factors if (n / f % 1 == 0) and (n / f not in factors)])
 
-        return sorted(factors)
-
-        # OLD WAY - checks every number, pretty inefficient
-        # factors = []
-        # for i in range(1, n+1):
-        #     if (n/i).is_integer():
-        #         factors.append(i)
-        # return factors
+    return sorted(factors)
 
 if __name__ == '__main__':
     print("This program graphs the number of factors of each integer between 1 and an inputted upper bound.\n"
